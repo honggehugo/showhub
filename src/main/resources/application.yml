@@ -1,0 +1,25 @@
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.241.128:3306/web?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 12345
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+      pool:
+        max-idle: 100
+        min-idle: 1
+        max-active: 300
+        max-wait: 10000
+    password: 12345
+server:
+  port: 8081
+showhub:
+  jwt:
+    secret: f4e2e52034348f86b67cde581c0f9eb5
+    expire: 604800
+    header: Authorization
